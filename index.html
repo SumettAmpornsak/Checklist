@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checklist Program</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- SweetAlert -->
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+        }
+        .checklist li {
+            margin-bottom: 10px;
+        }
+        .submit-btn {
+            margin-top: 20px;
+        }
+        .button-container {
+            display: flex;
+            gap: 10px; /* Add space between the buttons */
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="card shadow-lg">
+            <div class="card-header text-center bg-primary text-white">
+                <h1>รายการติดตั้ง</h1>
+            </div>
+            <div class="card-body">
+                <ul class="checklist list-group" id="checklist">
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item1" class="form-check-input me-2 task">
+                        <label for="item1" class="form-check-label">1 : ตั้งค่า IP address (ใส่ของเดิม หรือ สุ่ม ใหม่!) </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item2" class="form-check-input me-2 task">
+                        <label for="item2" class="form-check-label">2 : ตั้งค่า Desktop Icon </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item3" class="form-check-input me-2 task">
+                        <label for="item3" class="form-check-label">3 : ติดตั้ง Winrar 530Beta4x32x64 </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item4" class="form-check-input me-2 task">
+                        <label for="item4" class="form-check-label">4 : ติดตั้ง ChromeSetup </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item5" class="form-check-input me-2 task">
+                        <label for="item5" class="form-check-label">5 : ติดตั้ง fonts </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item6" class="form-check-input me-2 task">
+                        <label for="item6" class="form-check-label">6 : ติดตั้ง Foxit </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item7" class="form-check-input me-2 task">
+                        <label for="item7" class="form-check-label">7 : ติดตั้ง set up PanaceaHS (panacea) </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item8" class="form-check-input me-2 task">
+                        <label for="item8" class="form-check-label">8 : ติดตั้ง ExpressL2 (\\ibm-server User: unitc | Pass: 1132) </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item9" class="form-check-input me-2 task">
+                        <label for="item9" class="form-check-label">9 : สร้างทางลัด Chrome (172.16.1.168\rnurse)</label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item10" class="form-check-input me-2 task">
+                        <label for="item10" class="form-check-label">10 : สร้างทางลัด Chrome (172.16.1.168\nkpwork)</label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item11" class="form-check-input me-2 task">
+                        <label for="item11" class="form-check-label">11 : สร้างทางลัด Chrome (172.16.1.168\nkpwork/web/user/login) "Chart_IPD" </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item12" class="form-check-input me-2 task">
+                        <label for="item12" class="form-check-label">12 : สร้างทางลัด Chrome (172.16.11.191:8085\ireportag) </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item13" class="form-check-input me-2 task">
+                        <label for="item13" class="form-check-label">13 : สร้างทางลัด Chrome (www.pathonph.com/viewreport) "Doc_PD Viewer 1.13" </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item14" class="form-check-input me-2 task">
+                        <label for="item14" class="form-check-label">14 : สร้างทางลัด Chrome (www.pathonph.com/groupreport) "Nurse_PD Group 1.14" </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item15" class="form-check-input me-2 task">
+                        <label for="item15" class="form-check-label">15 : สร้างทางลัด Panacea </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item16" class="form-check-input me-2 task">
+                        <label for="item16" class="form-check-label">16 : ติดตั้ง Infinit ใน Edge เลือก InstallStarter (User: nph | Pass: 1) </label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item17" class="form-check-input me-2 task">
+                        <label for="item17" class="form-check-label">17 : ติดตั้ง Neohost ใน Edge (172.16.0.5/download.html) (User: oconner | Pass: 123456) ทดสอบ HS ด้วย 660000011</label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item18" class="form-check-input me-2 task">
+                        <label for="item18" class="form-check-label">18 : ติดตั้ง Microsoft Office Eng | Th พร้อมเปลี่ยนเป็นภาษาไทย</label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item19" class="form-check-input me-2 task">
+                        <label for="item19" class="form-check-label">19 : ติดตั้ง Real VNC (VncPass 1235)</label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item20" class="form-check-input me-2 task">
+                        <label for="item20" class="form-check-label">20 : ตั้งค่า โซนเวลาไทย / คีย์บอร์ดไทย / RegionFormat ไทย</label>
+                    </li>
+                    <li class="list-group-item d-flex align-items-center">
+                        <input type="checkbox" id="item21" class="form-check-input me-2 task">
+                        <label for="item21" class="form-check-label">21 : ติดตั้ง BGinfo (เลือก Hostname | ipaddress, สีเขียว ,ขนาด 16 ,Tahoma พร้อมปิด Edit group เลือก Enable)</label>
+                    </li>
+                </ul>
+                <div class="button-container mt-3">
+                    <button class="btn btn-success w-50" onclick="submitChecklist()">บันทีก</button>
+                    <button class="btn btn-info w-50" onclick="goToResult()">ดูผลลัพธ์</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <form action="save_completed.php" method="post" id="form">
+        <input type="hidden" name="completed" id="completed">
+    </form>
+
+    <script>
+        function submitChecklist() {
+            const tasks = document.querySelectorAll('.task');
+            const totalTasks = tasks.length;
+            let completedCount = 0;
+
+            tasks.forEach(task => {
+                if (task.checked) {
+                    completedCount++;
+                }
+            });
+
+            if (completedCount === totalTasks) {
+                Swal.fire({
+                    title: 'สำเร็จ!',
+                    text: 'เสร็จสิ้นทุกภารกิจ! นับเป็นความสำเร็จ 1 ครั้ง',
+                    icon: 'success',
+                    confirmButtonText: 'OK'
+                }).then(() => {
+                    // ส่งข้อมูลไป PHP
+                    document.getElementById('completed').value = 1;
+                    document.getElementById('form').submit();
+                    // ไปยังหน้า ผลลัพธ์
+                    window.location.href = 'result.html'; // ปรับชื่อไฟล์ result.html ตามที่ต้องการ
+                });
+            } else {
+                Swal.fire({
+                    title: 'ไม่สำเร็จ!',
+                    text: 'กรุณาทำภารกิจทั้งหมดให้เสร็จก่อน!',
+                    icon: 'error',
+                    confirmButtonText: 'OK'
+                });
+            }
+        }
+
+        function goToResult() {
+            // ไปยังหน้า ดูผลลัพธ์
+            window.location.href = 'result.html'; // ปรับชื่อไฟล์ result.html ตามที่ต้องการ
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
